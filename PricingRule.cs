@@ -10,9 +10,9 @@ namespace SupermarketCheckout
     {
         public string SKU { get; }
         public int UnitPrice { get; }
-        public SpecialPrice SpecialPrice { get; }
+        public SpecialPrice? SpecialPrice { get; }
 
-        public PricingRule(string sku, int unitPrice, SpecialPrice specialPrice = null)
+        public PricingRule(string sku, int unitPrice, SpecialPrice? specialPrice = null)
         {
             SKU = sku;
             UnitPrice = unitPrice;

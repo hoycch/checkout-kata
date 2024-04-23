@@ -1,0 +1,36 @@
+Supermarket Checkout System
+This is a simple implementation of a supermarket checkout system that calculates the total price of a shopping cart based on pricing rules and special offers.
+Problem Description
+In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. In our shop, we'll use individual letters of the alphabet (A, B, C, and so on). Our goods are priced individually. In addition, some items are multipriced: buy n of them, and they'll cost you y pounds. For example, item 'A' might cost 50 pounds individually, but this week we have a special offer: buy three 'A's and they'll cost you 130.
+Our checkout accepts items in any order, so that if we scan a B, an A, and another B, we'll recognize the two B's and price them at 45 (for a total price so far of 95). Because the pricing changes frequently, we need to be able to pass in a set of pricing rules each time we start handling a checkout transaction.
+Implementation
+The solution is implemented as a C# class library and follows a test-driven development (TDD) approach. The main components of the implementation are:
+
+Product or SKU: Represents a product or SKU with properties like Id, UnitPrice, SpecialPrice, and SpecialPriceQuantity.
+PricingRule: Represents a pricing rule for a product, including the unit price, special price, and special price quantity.
+Basket: Manages the items scanned by the customer and their quantities.
+Checkout: Implements the ICheckout interface and provides methods to scan items and calculate the total price based on the pricing rules and items in the basket.
+
+Usage
+Here's an example of how to use the Checkout class:
+csharpCopy code// Define pricing rules
+var pricingRules = new List<PricingRule>
+{
+    new PricingRule("A", 50, new SpecialPrice(3, 130)),
+    new PricingRule("B", 30, new SpecialPrice(2, 45)),
+    new PricingRule("C", 20, null),
+    new PricingRule("D", 15, null)
+};
+
+// Create a new checkout instance
+var checkout = new Checkout(pricingRules);
+
+// Scan items
+checkout.Scan("A");
+checkout.Scan("B");
+checkout.Scan("A");
+checkout.Scan("C");
+
+// Get the total price
+int totalPrice = checkout.GetTotalPrice();
+Console.WriteLine($"Total price: {totalPrice}");
