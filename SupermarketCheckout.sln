@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupermarketCheckout", "SupermarketCheckout.csproj", "{F7A62BF9-3DA6-4D8B-8C8D-C4FC3C66F0AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutTests", "..\CheckoutTests\CheckoutTests.csproj", "{6D440B9F-B641-4EC3-9A0D-7F46B5E9A3C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F7A62BF9-3DA6-4D8B-8C8D-C4FC3C66F0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7A62BF9-3DA6-4D8B-8C8D-C4FC3C66F0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7A62BF9-3DA6-4D8B-8C8D-C4FC3C66F0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D440B9F-B641-4EC3-9A0D-7F46B5E9A3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D440B9F-B641-4EC3-9A0D-7F46B5E9A3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D440B9F-B641-4EC3-9A0D-7F46B5E9A3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D440B9F-B641-4EC3-9A0D-7F46B5E9A3C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
